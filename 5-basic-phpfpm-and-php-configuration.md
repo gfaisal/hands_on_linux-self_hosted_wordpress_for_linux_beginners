@@ -13,25 +13,25 @@ Now ensure that the directory for php-fpm sockets exists
 
 ## Create the PHP and php-fpm configuration files (and back up the originals)
 
-    mv /etc/php/7.2/fpm/php-fpm.conf /etc/php/7.2/fpm/php-fpm.conf.ORIG
-    nano /etc/php/7.2/fpm/php-fpm.conf
+    mv /etc/php/7.4/fpm/php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf.ORIG
+    nano /etc/php/7.4/fpm/php-fpm.conf
 
 Add the following content:
 
     [global]
-    pid = /run/php/php7.2-fpm.pid
+    pid = /run/php/php7.4-fpm.pid
     error_log = /var/log/php-fpm.log
-    include=/etc/php/7.2/fpm/pool.d/*.conf
+    include=/etc/php/7.4/fpm/pool.d/*.conf
 
 Remove the original (default) pool:
 
-    rm /etc/php/7.2/fpm/pool.d/www.conf
+    rm /etc/php/7.4/fpm/pool.d/www.conf
 
 
 
 Create a *new* default pool configuration at /etc/php/7.2/fpm/pool.d/www.conf with the following content:
 
-    # nano /etc/php/7.2/fpm/pool.d/www.conf
+    # nano /etc/php/7.4/fpm/pool.d/www.conf
 
 
     [default]
@@ -54,8 +54,8 @@ Create a *new* default pool configuration at /etc/php/7.2/fpm/pool.d/www.conf wi
 
 Rename the original file here and then create a new one:
 
-    mv /etc/php/7.2/fpm/php.ini /etc/php/7.2/fpm/php.ini.ORIG
-    nano /etc/php/7.2/fpm/php.ini
+    mv /etc/php/7.4/fpm/php.ini /etc/php/7.4/fpm/php.ini.ORIG
+    nano /etc/php/7.4/fpm/php.ini
 
 Paste in the content below:
 
