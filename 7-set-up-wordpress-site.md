@@ -112,7 +112,7 @@ Add the following content to /etc/nginx/conf.d/tutorialinux.conf. Replace all oc
 Add the following content to a new php-fpm pool configuration file:
 
 ```
-nano /etc/php/7.2/fpm/pool.d/tutorialinux.conf
+nano /etc/php/7.4/fpm/pool.d/tutorialinux.conf
 ```
 
 Replace all occurrences of "tutorialinux" in the configuration file content below with your site name.
@@ -207,7 +207,7 @@ Now it's time to actually download and install the WordPress application.
 
 ## Restart your services
 
-    systemctl restart php7.2-fpm
+    systemctl restart php7.4-fpm
     systemctl restart nginx
 
 
